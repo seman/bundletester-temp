@@ -1,6 +1,8 @@
 from contextlib import contextmanager
 import logging
 import os
+from StringIO import StringIO
+import yaml
 
 from deployer.config import ConfigStack
 
@@ -27,6 +29,10 @@ def find_testdir(directory):
     if os.path.exists(testdir):
         return os.path.abspath(testdir)
     return None
+
+
+def yaml_loads(yaml_str):
+    return yaml.safe_load(StringIO(yaml_str))
 
 
 @contextmanager

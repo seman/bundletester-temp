@@ -22,7 +22,7 @@ class O(object):
 
 class TestRunner(unittest.TestCase):
 
-    def test_run_suite(self):
+    def _skip_test_run_suite(self):
         logging.basicConfig(level=logging.CRITICAL)
         parser = config.Parser()
         parser.bootstrap = False

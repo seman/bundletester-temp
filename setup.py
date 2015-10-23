@@ -8,19 +8,19 @@ with open(reqs_file) as f:
             if not line.startswith('--')]
 
 SETUP = {
-    'name': "bundletester",
+    'name': "cloudweatherreport",
     'packages': find_packages(),
     'version': "0.5.7",
     'author': "Juju Developers",
     'author_email': "juju@lists.ubuntu.com",
-    'url': "https://github.com/juju-solutions/bundletester",
+    'url': "https://github.com/juju-solutions/cwr",
     'license': "Affero GNU Public License v3",
     'long_description': open('README.md').read(),
     'description': 'A juju charm and bundle test runner',
     'entry_points': {
         'console_scripts': [
-            'bundletester = bundletester.tester:main',
-            'bundlewatcher = bundletester.watcher:main'
+            'cloudweatherreport = cloudweatherreport.tester:main',
+            'bundlewatcher = cloudweatherreport.watcher:main'
         ]
     },
     'install_requires': reqs,

@@ -174,6 +174,7 @@ FACTORY = {'json': JSONReporter,
            'dot': DotReporter,
            'spec': SpecReporter}
 
+#TODO: add HTMLReporter
 
 def get_reporter(name, fp, options):
     return FACTORY[name](fp, options)
