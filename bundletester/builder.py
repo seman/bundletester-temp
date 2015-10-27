@@ -236,9 +236,8 @@ class Builder(object):
         id = self.action_do(unit, action, *args)
         return self.action_fetch(id, action, timeout)
 
+
 class CannotConnectEnv(subprocess.CalledProcessError):
 
     def __init__(self, e):
         super(CannotConnectEnv, self).__init__(e.returncode, e.cmd, e.output)
-
-
